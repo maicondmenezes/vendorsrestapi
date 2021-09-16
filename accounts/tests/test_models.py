@@ -6,9 +6,7 @@ pytestmark = pytest.mark.django_db
 
 def test_create_user():
     user = User.objects.create_user(
-        username="user_test",
-        email="user@test.com",
-        password="passW0rd",
+        username="user_test", email="user@test.com", password="passW0rd"
     )
 
     assert user.username == "user_test"
@@ -16,3 +14,15 @@ def test_create_user():
     assert user.is_active
     assert not user.is_staff
     assert not user.is_superuser
+
+
+def test_create_superuser():
+    user = User.objects.create_superuser(
+        username="user_test", email="user@test.com", password="passW0rd"
+    )
+
+    assert user.username == "user_test"
+    assert user.email == "user@test.com"
+    assert user.is_active
+    assert user.is_staff
+    assert user.is_superuser

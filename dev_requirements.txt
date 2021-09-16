@@ -1,6 +1,7 @@
 django
 django-autoslug
 django-debug-toolbar
+django-localflavor
 django-model-utils
 django-grappelli
 djangorestframework
