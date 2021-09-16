@@ -1,0 +1,11 @@
+django
+django-autoslug
+django-debug-toolbar
+django-model-utils
+django-grappelli
+djangorestframework
+factory-boy
+psycopg2
+pytest
+pytest-cov
+pytest-django
