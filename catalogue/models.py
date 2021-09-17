@@ -1,6 +1,5 @@
 from django.db import models
 from django.urls import reverse
-from django.urls.base import is_valid_path
 
 from model_utils.models import TimeStampedModel
 from localflavor.br.models import BRCNPJField
@@ -28,7 +27,7 @@ class Vendor(TimeStampedModel):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("catalogue:list_by_vendor", kwargs={"pk": self.pk})
+        return reverse("catalogue:vendor-detail", kwargs={"pk": self.pk})
 
 
 class Product(TimeStampedModel):
@@ -59,4 +58,4 @@ class Product(TimeStampedModel):
 
     def get_absolute_url(self):
 
-        return reverse("catalogue:product_detail", kwargs={"pk": self.pk})
+        return reverse("catalogue:product-detail", kwargs={"pk": self.pk})

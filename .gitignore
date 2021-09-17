@@ -94,6 +94,10 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
+# static and templtes are not used on this project
+static/
+templates/
+
 #VS code
 .vscode/
 
