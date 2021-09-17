@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # 3rd apps
     "localflavor",
+    "django_filters",
     "grappelli",
     "rest_framework",
     "debug_toolbar",
@@ -45,7 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Developed
     "accounts.apps.AccountsConfig",
-    "catalogue.apps.AccountsConfig",
+    "catalogue.apps.CatalogueConfig",
 ]
 
 MIDDLEWARE = [
@@ -56,6 +57,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "vendorsrestapi.urls"
@@ -95,6 +97,15 @@ DATABASES = {
         "HOST": "localhost",
         "PORT": "5432",
     }
+}
+
+# REST Framework
+# https://www.django-rest-framework.org/api-guide
+
+REST_FRAMEWORK = {
+    "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    "PAGE_SIZE": 100,
 }
 
 
