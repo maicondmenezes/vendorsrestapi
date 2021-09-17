@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     "django_filters",
     "grappelli",
     "rest_framework",
-    "debug_toolbar",
     # Django
     "django.contrib.admin",
     "django.contrib.auth",
@@ -57,11 +56,10 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "vendorsrestapi.urls"
-GRAPPELLI_ADMIN_TITLE = "Vendors REST API"
+GRAPPELLI_ADMIN_TITLE = "Vendors REST API 0.1.0b"
 AUTH_USER_MODEL = "accounts.User"
 
 TEMPLATES = [
