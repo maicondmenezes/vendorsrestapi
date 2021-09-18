@@ -17,6 +17,7 @@ class AvailableManager(models.Manager):
 class Vendor(TimeStampedModel):
     name = models.CharField(max_length=200)
     cnpj = BRCNPJField(unique=True)
+    city = models.CharField(max_length=200, blank=True)
 
     class Meta:
         ordering = ("name",)
