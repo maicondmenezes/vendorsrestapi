@@ -17,7 +17,7 @@ class VendorSerializer(serializers.ModelSerializer):
     to serializer and deserializer itens and prepare json to rest api consumers
     """
 
-    products = ProductSerializer(many=True, blank=True)
+    products = ProductSerializer(many=True)
 
     class Meta:
         model = Vendor

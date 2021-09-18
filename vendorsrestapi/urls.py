@@ -27,6 +27,6 @@ router.register(r"product", ProductViewset, basename="product")
 urlpatterns = [
     path("grappelli/", include("grappelli.urls")),
     path("admin/", admin.site.urls),
-    path("", include((router.urls, "catalogue"), namespace="catalogue")),
+    path("catalogue/", include((router.urls, "catalogue"), namespace="catalogue")),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
 ]

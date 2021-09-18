@@ -97,6 +97,7 @@ ipython_config.py
 # static and templtes are not used on this project
 static/
 templates/
+curl_test/
 
 #VS code
 .vscode/
