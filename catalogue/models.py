@@ -15,6 +15,11 @@ class AvailableManager(models.Manager):
 
 
 class Vendor(TimeStampedModel):
+    """
+    Model to resgistrate a vendor in database;
+    Note that if you delete a vendor from database by default all related products are remove
+    """
+
     name = models.CharField(max_length=200)
     cnpj = BRCNPJField(unique=True)
     city = models.CharField(max_length=200, blank=True)
