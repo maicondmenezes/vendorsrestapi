@@ -89,10 +89,10 @@ WSGI_APPLICATION = "vendorsrestapi.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "vendors_db",
-        "USER": "admin",
-        "PASSWORD": "SigiloDev@22",
-        "HOST": "localhost",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
+        "HOST": "db",
         "PORT": "5432",
     }
 }
