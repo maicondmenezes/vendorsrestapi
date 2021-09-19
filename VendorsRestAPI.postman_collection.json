@@ -1,0 +1,1034 @@
+{
+	"info": {
+		"_postman_id": "1850c915-82d0-4045-8c6e-f3f25de2bf09",
+		"name": "Doc - VendorsRestAPI",
+		"description": "# Presentation\n\nDocumentation to use VendorsRestAPI\n\n# Authentication\n\nIt's not necessary authentication to use this API\n\n# Error Codes\n\n**400 – Bad Request**\n\nData sent incorrectly or non-standard\n\n**403 – Forbidden**\n\nNot authorized to access desired resource",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "vendor",
+			"item": [
+				{
+					"name": "List Vendors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_name}}/vendor",
+							"host": [
+								"{{api_name}}"
+							],
+							"path": [
+								"vendor"
+							]
+						},
+						"description": "Show a list that contains all vendors in the system."
+					},
+					"response": [
+						{
+							"name": "List Vendors",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_name}}/vendor",
+									"host": [
+										"{{api_name}}"
+									],
+									"path": [
+										"vendor"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Sep 2021 16:39:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-Clacks-Overhead",
+									"value": "GNU Terry Pratchett"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Server",
+									"value": "PythonAnywhere"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"name\": \"Chuga TT\",\n            \"cnpj\": \"53.331.923/0001-92\",\n            \"city\": \"Rio de Setembro\",\n            \"products\": [\n                {\n                    \"name\": \"Lurte\",\n                    \"code\": \"2234\",\n                    \"price\": \"25.00\"\n                },\n                {\n                    \"name\": \"ngio\",\n                    \"code\": \"3476\",\n                    \"price\": \"25.00\"\n                },\n                {\n                    \"name\": \"Parapero\",\n                    \"code\": \"4323\",\n                    \"price\": \"489.00\"\n                },\n                {\n                    \"name\": \"Termt\",\n                    \"code\": \"1212\",\n                    \"price\": \"12.56\"\n                },\n                {\n                    \"name\": \"Termt\",\n                    \"code\": \"1212\",\n                    \"price\": \"12.56\"\n                }\n            ]\n        },\n        {\n            \"name\": \"Toranja\",\n            \"cnpj\": \"36.992.274/0001-51\",\n            \"city\": \"\",\n            \"products\": [\n                {\n                    \"name\": \"Lurte\",\n                    \"code\": \"2234\",\n                    \"price\": \"25.00\"\n                },\n                {\n                    \"name\": \"Termt\",\n                    \"code\": \"1212\",\n                    \"price\": \"12.56\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Filter Vendor by Fields",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_name}}/vendor/?name=Toranja",
+							"host": [
+								"{{api_name}}"
+							],
+							"path": [
+								"vendor",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Toranja"
+								}
+							]
+						},
+						"description": "**Filter List by Fields**\n\n_A vendor contains fields that can be filter just send params with the url. Fields are available to filter:_\n- Id\n- Name\n- CNPJ\n- City"
+					},
+					"response": [
+						{
+							"name": "Filter Vendor by Name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_name}}/vendor/?name=Toranja",
+									"host": [
+										"{{api_name}}"
+									],
+									"path": [
+										"vendor",
+										""
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Toranja"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Sep 2021 17:28:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "215"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-Clacks-Overhead",
+									"value": "GNU Terry Pratchett"
+								},
+								{
+									"key": "Server",
+									"value": "PythonAnywhere"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"name\": \"Toranja\",\n            \"cnpj\": \"36.992.274/0001-51\",\n            \"city\": \"\",\n            \"products\": [\n                {\n                    \"name\": \"Lurte\",\n                    \"code\": \"2234\",\n                    \"price\": \"25.00\"\n                },\n                {\n                    \"name\": \"Termt\",\n                    \"code\": \"1212\",\n                    \"price\": \"12.56\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "New Vendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Toranja\",\n    \"cnpj\": \"55.896.701/0001-42\",\n    \"city\": \"Rio de Setembro\"        \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_name}}/vendor/",
+							"host": [
+								"{{api_name}}"
+							],
+							"path": [
+								"vendor",
+								""
+							]
+						},
+						"description": "Register a vendor object with it's products object childs, a default vendor's JSON object should have a list with of products to be register or updated or a empty list, if you wish register a single vendor without products.\n\n_Note that if you send a vendor object without explicit indicates a products list (empty or not), it's trows a bad request  http error_"
+					},
+					"response": [
+						{
+							"name": "already exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Toranja\",\n    \"cnpj\": \"36.992.274/0001-51\",    \n    \"products\": [\n        {\n            \"name\": \"Lurte\",\n            \"code\": \"2234\",\n            \"price\": \"25.00\"            \n        },\n        {   \n            \"name\": \"Termt\",\n            \"code\": \"1212\",\n            \"price\": \"12.56\"            \n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_name}}/vendor/",
+									"host": [
+										"{{api_name}}"
+									],
+									"path": [
+										"vendor",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Sep 2021 15:06:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Server",
+									"value": "PythonAnywhere"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cnpj\": [\n        \"vendor com este cnpj já existe.\"\n    ]\n}"
+						},
+						{
+							"name": "New Vendor",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Toranja\",\n    \"cnpj\": \"36.992.274/0001-51\",    \n    \"products\": [\n        {\n            \"name\": \"Lurte\",\n            \"code\": \"2234\",\n            \"price\": \"25.00\"            \n        },\n        {   \n            \"name\": \"Termt\",\n            \"code\": \"1212\",\n            \"price\": \"12.56\"            \n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_name}}/vendor/",
+									"host": [
+										"{{api_name}}"
+									],
+									"path": [
+										"vendor",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Sep 2021 16:38:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "163"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-Clacks-Overhead",
+									"value": "GNU Terry Pratchett"
+								},
+								{
+									"key": "Server",
+									"value": "PythonAnywhere"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Toranja\",\n    \"cnpj\": \"36.992.274/0001-51\",\n    \"city\": \"Rio de Setembro\",\n    \"products\": [\n        {\n            \"name\": \"Lurte\",\n            \"code\": \"2234\",\n            \"price\": \"25.00\"\n        },\n        {\n            \"name\": \"Termt\",\n            \"code\": \"1212\",\n            \"price\": \"12.56\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Bad Request Error caused by a vendor without products list",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Toranja\",\n    \"cnpj\": \"55.896.701/0001-42\",\n    \"city\": \"Rio de Setembro\"        \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_name}}/vendor/",
+									"host": [
+										"{{api_name}}"
+									],
+									"path": [
+										"vendor",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Sep 2021 17:03:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Server",
+									"value": "PythonAnywhere"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"products\": [\n        \"Este campo é obrigatório.\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Vendor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_name}}/vendor/:vendor_id/",
+							"host": [
+								"{{api_name}}"
+							],
+							"path": [
+								"vendor",
+								":vendor_id",
+								""
+							],
+							"variable": [
+								{
+									"key": "vendor_id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "This request is responsable for delete a vendor"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vendor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Marva BB\",\n    \"cnpj\": \"36.992.274/0001-51\",\n    \"city\": \"\",\n    \"products\": [\n        {\n            \"name\": \"Lurte\",\n            \"code\": \"2234\",\n            \"price\": \"25.00\"\n        },\n        {\n            \"name\": \"Termt\",\n            \"code\": \"1212\",\n            \"price\": \"12.56\"\n        }\n    ]\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_name}}/vendor/:vendor_id/",
+							"host": [
+								"{{api_name}}"
+							],
+							"path": [
+								"vendor",
+								":vendor_id",
+								""
+							],
+							"variable": [
+								{
+									"key": "vendor_id",
+									"value": "2"
+								}
+							]
+						},
+						"description": "**Update vendor**"
+					},
+					"response": []
+				},
+				{
+					"name": "Change Vendor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Chuga TT\",\n    \"cnpj\": \"53.331.923/0001-92\",\n    \"city\": \"Rio de Setembro\",\n    \"products\": [\n        {\n            \"name\": \"Parapero\",\n            \"code\": \"4323\",\n            \"price\": \"489.00\"\n        }        \n    ]\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_name}}/vendor/:vendor_id/",
+							"host": [
+								"{{api_name}}"
+							],
+							"path": [
+								"vendor",
+								":vendor_id",
+								""
+							],
+							"variable": [
+								{
+									"key": "vendor_id",
+									"value": "2",
+									"description": "id of the vendor to be modified"
+								}
+							]
+						},
+						"description": "**Update vendor**"
+					},
+					"response": []
+				}
+			],
+			"description": "**This folder represents a vendor type object in VendorsRestAPI**"
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "List Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_name}}/product",
+							"host": [
+								"{{api_name}}"
+							],
+							"path": [
+								"product"
+							]
+						},
+						"description": "Show a list that contains all product in the system."
+					},
+					"response": [
+						{
+							"name": "List Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_name}}/product",
+									"host": [
+										"{{api_name}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Sep 2021 17:49:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-Clacks-Overhead",
+									"value": "GNU Terry Pratchett"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Server",
+									"value": "PythonAnywhere"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 7,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"name\": \"Lurte\",\n            \"code\": \"2234\",\n            \"price\": \"25.00\"\n        },\n        {\n            \"name\": \"Lurte\",\n            \"code\": \"2234\",\n            \"price\": \"25.00\"\n        },\n        {\n            \"name\": \"ngio\",\n            \"code\": \"3476\",\n            \"price\": \"25.00\"\n        },\n        {\n            \"name\": \"Parapero\",\n            \"code\": \"4323\",\n            \"price\": \"489.00\"\n        },\n        {\n            \"name\": \"Termt\",\n            \"code\": \"1212\",\n            \"price\": \"12.56\"\n        },\n        {\n            \"name\": \"Termt\",\n            \"code\": \"1212\",\n            \"price\": \"12.56\"\n        },\n        {\n            \"name\": \"Termt\",\n            \"code\": \"1212\",\n            \"price\": \"12.56\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Filter Product by Fields",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_name}}/product/?code=1212",
+							"host": [
+								"{{api_name}}"
+							],
+							"path": [
+								"product",
+								""
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "1212"
+								}
+							]
+						},
+						"description": "**Filter List by Fields**\n\nLike a vendor products can be filtered by it's fields just sending fields as params with '?' query url\n\n_A product can be filter by:_\n\n- Id\n- Name\n- Code\n- Price\n- Vendor"
+					},
+					"response": [
+						{
+							"name": "Filter Product by Code",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_name}}/product/?code=1212",
+									"host": [
+										"{{api_name}}"
+									],
+									"path": [
+										"product",
+										""
+									],
+									"query": [
+										{
+											"key": "code",
+											"value": "1212"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Sep 2021 17:16:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "192"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-Clacks-Overhead",
+									"value": "GNU Terry Pratchett"
+								},
+								{
+									"key": "Server",
+									"value": "PythonAnywhere"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"name\": \"Termt\",\n            \"code\": \"1212\",\n            \"price\": \"12.56\"\n        },\n        {\n            \"name\": \"Termt\",\n            \"code\": \"1212\",\n            \"price\": \"12.56\"\n        },\n        {\n            \"name\": \"Termt\",\n            \"code\": \"1212\",\n            \"price\": \"12.56\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "New Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"name\": \"asew\",\n    \"code\": \"3456\",\n    \"price\": \"12.95\",\n    \"vendor\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_name}}/product/",
+							"host": [
+								"{{api_name}}"
+							],
+							"path": [
+								"product",
+								""
+							]
+						},
+						"description": "Register a single product."
+					},
+					"response": [
+						{
+							"name": "New Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n{\n    \"name\": \"asew\",\n    \"code\": \"3456\",\n    \"price\": \"12.95\",\n    \"vendor\": 3\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_name}}/product/",
+									"host": [
+										"{{api_name}}"
+									],
+									"path": [
+										"product",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Sep 2021 18:06:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-Clacks-Overhead",
+									"value": "GNU Terry Pratchett"
+								},
+								{
+									"key": "Server",
+									"value": "PythonAnywhere"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"asew\",\n    \"code\": \"3456\",\n    \"price\": \"12.95\",\n    \"vendor\": 3\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_name}}/product/:produt_id/",
+							"host": [
+								"{{api_name}}"
+							],
+							"path": [
+								"product",
+								":produt_id",
+								""
+							],
+							"variable": [
+								{
+									"key": "produt_id",
+									"value": "5"
+								}
+							]
+						},
+						"description": "This request is responsable for delete a product"
+					},
+					"response": [
+						{
+							"name": "Delete Product 5",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{api_name}}/product/:produt_id/",
+									"host": [
+										"{{api_name}}"
+									],
+									"path": [
+										"product",
+										":produt_id",
+										""
+									],
+									"variable": [
+										{
+											"key": "produt_id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 18 Sep 2021 18:10:48 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-Clacks-Overhead",
+									"value": "GNU Terry Pratchett"
+								},
+								{
+									"key": "Server",
+									"value": "PythonAnywhere"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"name\": \"shoru\",\n    \"code\": \"3456\",\n    \"price\": \"42.95\",\n    \"vendor\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_name}}/product/:product_id/",
+							"host": [
+								"{{api_name}}"
+							],
+							"path": [
+								"product",
+								":product_id",
+								""
+							],
+							"variable": [
+								{
+									"key": "product_id",
+									"value": "7",
+									"description": "product to updated"
+								}
+							]
+						},
+						"description": "**Update product**"
+					},
+					"response": []
+				},
+				{
+					"name": "Change Product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"name\": \"asew\",\n    \"code\": \"3456\",\n    \"price\": \"312.95\",\n    \"vendor\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_name}}/product/:product_id/",
+							"host": [
+								"{{api_name}}"
+							],
+							"path": [
+								"product",
+								":product_id",
+								""
+							],
+							"variable": [
+								{
+									"key": "product_id",
+									"value": "7"
+								}
+							]
+						},
+						"description": "**Update vendor**"
+					},
+					"response": []
+				}
+			],
+			"description": "**This folder represents a product type object in VendorsRestAPI**"
+		}
+	]
+}
